@@ -75,7 +75,7 @@ rfm['Income_Segment'] = pd.qcut(
 # Cleaning
 rfm['Income_Segment'] = rfm['Income_Segment'].astype(str).str.strip()
 
-# Step 4: Convert to numeric score
+#Convert to numeric score
 rfm['Income_Score'] = rfm['Income_Segment'].map({
     'Low': 1,
     'Medium': 0.5,
@@ -127,7 +127,7 @@ rfm['Demand_Change_%'] = avg_elasticity * (-discount)
 rfm['Adjusted_CLV'] = rfm['CLV'] * (1 + rfm['Demand_Change_%'])
 
 rfm['Discount_Cost'] = rfm['AvgOrderValue'] * discount
-rfm['Expected_Value'] = rfm['Adjusted_CLV'] * rfm['Churn_Prob'] * 0.1
+rfm['Expected_Value'] = rfm['Adjusted_CLV'] * rfm['Churn_Prob']
 rfm['ROI'] = rfm['Expected_Value'] - rfm['Discount_Cost']
 
 # Ranking customers: Highest ROI means best targets
@@ -152,8 +152,37 @@ plt.plot(pricing_df['price'], pricing_df['elasticity'])
 plt.title("Elasticity Curve")
 plt.show()
 
+rfm['Target_Flag'] = np.where(
+    (rfm['ROI'] > 200) & (rfm['Income_Segment'] != 'Low'),
+    1,
+    0
+)
+
+
+#METRICS
+
+
+# Total customers
+total_customers = len(rfm)
+
+# Target customers
+target_customers = rfm[rfm['Target_Flag'] == 1].shape[0]
+
+# % targeted
+target_pct = (target_customers / total_customers) * 100
+
+# Avg ROI
+avg_roi = rfm['ROI'].mean()
+
+# High ROI customers
+high_roi = rfm[rfm['ROI'] > 500].shape[0]
+
+print("Total Customers:", total_customers)
+print("Target Customers:", target_customers)
+print("Target %:", round(target_pct,2))
+print("Avg ROI:", round(avg_roi,2))
+print("High ROI Customers:", high_roi)
 print(rfm[['CustomerID','Segment','Income_Segment','ROI']].head())
 
-rfm.to_csv("final_output.csv", index=False)
-pricing_df.to_csv("pricing_output.csv", index=False)
+
 
