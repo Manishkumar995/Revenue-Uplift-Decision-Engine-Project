@@ -1,4 +1,4 @@
-# Revenue-Uplift-Decision-Engine-Project
+# Revenue-Uplift-Decision-Engine-Project (SQL + PYTHON + POWER BI)
 
 # Revenue Uplift Decision Engine
 
