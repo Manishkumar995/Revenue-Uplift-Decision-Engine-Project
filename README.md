@@ -60,7 +60,7 @@ This project solves that by identifying customers where discounts maximize ROI.
 
 ---
 
-## 📊 Key Outputs
+##  Key Outputs
 
 * Customer-level ROI estimation
 * Target customer identification
