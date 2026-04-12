@@ -1,6 +1,6 @@
 # Revenue-Uplift-Decision-Engine-Project (SQL + PYTHON + POWER BI)
 
-# Revenue Uplift Decision Engine
+# ROI-Driven Customer Targeting Engine using Churn & Price Elasticity
 
 ##  Overview
 
