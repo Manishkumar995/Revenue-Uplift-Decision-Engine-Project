@@ -9,9 +9,9 @@ This project builds an end-to-end data-driven system to optimize customer target
 It integrates:
 
 * Customer segmentation (RFM)
-* Churn probability modeling
-* Price elasticity analysis
-* ROI-based decision engine
+* Churn probability modeling.
+* Price elasticity analysis.
+* ROI-based decision engine.
 
 ---
 
