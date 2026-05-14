@@ -60,6 +60,9 @@ This project solves that by identifying customers where discounts maximize ROI.
 
 ---
 
+<img width="589" height="338" alt="image" src="https://github.com/user-attachments/assets/72835ec9-36f6-458f-ab80-3f1bda752e15" />
+
+
 ##  Key Outputs
 
 * Customer-level ROI estimation
