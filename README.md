@@ -59,8 +59,9 @@ This project solves that by identifying customers where discounts maximize ROI.
 * Identified high-value target customers
 
 ---
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ec105fbc-9ef0-4ce3-86df-04e9182f9779" />
 
-<img width="589" height="338" alt="image" src="https://github.com/user-attachments/assets/72835ec9-36f6-458f-ab80-3f1bda752e15" />
+
 
 
 ##  Key Outputs
